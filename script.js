@@ -15,4 +15,14 @@ generateBtn.addEventListener('click', ()=>{ passwordField.value = generatePasswo
 // ===== Calculatrice simple =====
 let calcValue = '';
 const calcDisplay = document.getElementById('calcDisplay');
-function appendCalc
+function appendCalc(val){ calcValue+=val; calcDisplay.value=calcValue; }
+function clearCalc(){ calcValue=''; calcDisplay.value=''; }
+function calcResult(){ try{ calcDisplay.value=eval(calcValue); calcValue=''; }catch{ calcDisplay.value='Erreur'; calcValue=''; } }
+
+// ===== Convertisseur Celsius/Fahrenheit =====
+function convertTemp(){
+  const c = parseFloat(document.getElementById('celsius').value);
+  if(!isNaN(c)){
+    document.getElementById('fahrenheit').textContent = (c*9/5+32).toFixed(2)+' °F';
+  } else { document.getElementById('fahrenheit').textContent = 'Entrez un nombre valide'; }
+}
