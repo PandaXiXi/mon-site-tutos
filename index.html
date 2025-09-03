@@ -2,31 +2,46 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Site de Tutos</title>
-  <!-- Lien vers le CSS personnalisé -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Mon Site de Tutos & Outils</h1>
-  <p>Bienvenue sur mon site !</p>
-  <nav>
-    <a href="#">Tutos</a>
-    <a href="#">Outils</a>
-    <a href="#">À propos</a>
-  </nav>
-</header>
+  <!-- ===== En-tête ===== -->
+  <header>
+    <h1>Mon Site de Tutos & Outils</h1>
+    <p>Des ressources simples et utiles pour apprendre et créer</p>
+    <nav>
+      <a href="#">Tutos</a>
+      <a href="#">Outils</a>
+      <a href="#">À propos</a>
+    </nav>
+  </header>
 
-<section>
-  <h2>Article Exemple</h2>
-  <p>Ceci est un exemple de texte pour vérifier que le CSS fonctionne.</p>
-  <button>Cliquer ici</button>
-</section>
+  <!-- ===== Contenu principal ===== -->
+  <main>
+    <section>
+      <h2>Derniers tutos</h2>
+      <article>
+        <h3>✨ Créer son premier site GitHub Pages</h3>
+        <p>Un guide simple pour mettre en ligne ton site gratuitement.</p>
+        <a class="btn" href="#">Lire le tuto</a>
+      </article>
 
-<footer>
-  <p>© 2025 Mon Site de Tutos</p>
-</footer>
+      <article>
+        <h3>🔒 Générateur de mots de passe</h3>
+        <p>Un petit outil pratique pour sécuriser tes comptes.</p>
+        <a class="btn" href="#">Essayer l’outil</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- ===== Pied de page ===== -->
+  <footer>
+    <p>© 2025 Mon Site de Tutos – Fait avec ❤️</p>
+  </footer>
 
 </body>
 </html>
