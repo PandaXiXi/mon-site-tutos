@@ -13,34 +13,10 @@ header {
   text-align: center;
 }
 
-nav {
-  background: #444;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0.5rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
 .container {
   max-width: 900px;
   margin: 2rem auto;
   padding: 1rem;
-}
-
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.3rem;
-  margin-bottom: 1rem;
 }
 
 .card {
@@ -51,24 +27,12 @@ h2 {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-input, button {
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
 button {
   background: #444;
   color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   cursor: pointer;
 }
 
