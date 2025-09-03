@@ -12,7 +12,6 @@
   <!-- ===== En-tête ===== -->
   <header>
     <h1>Mon Site de Tutos & Outils</h1>
-    <p>Des ressources simples et utiles pour apprendre et créer</p>
     <nav>
       <a href="#">Tutos</a>
       <a href="#">Outils</a>
@@ -32,8 +31,9 @@
 
       <article>
         <h3>🔒 Générateur de mots de passe</h3>
-        <p>Un petit outil pratique pour sécuriser tes comptes.</p>
-        <a class="btn" href="#">Essayer l’outil</a>
+        <p>Clique sur le bouton pour générer un mot de passe aléatoire :</p>
+        <input type="text" id="password" readonly>
+        <button id="generate">Générer</button>
       </article>
     </section>
   </main>
@@ -42,6 +42,25 @@
   <footer>
     <p>© 2025 Mon Site de Tutos – Fait avec ❤️</p>
   </footer>
+
+  <!-- ===== JavaScript pour le générateur ===== -->
+  <script>
+    const generateBtn = document.getElementById('generate');
+    const passwordField = document.getElementById('password');
+
+    function generatePassword(length = 12) {
+      const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~';
+      let password = '';
+      for (let i = 0; i < length; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return password;
+    }
+
+    generateBtn.addEventListener('click', () => {
+      passwordField.value = generatePassword();
+    });
+  </script>
 
 </body>
 </html>
