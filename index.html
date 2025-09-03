@@ -2,70 +2,31 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Site de Tutos & Outils</title>
+  <title>Mon Site de Tutos</title>
+  <!-- Lien vers le CSS personnalisé -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header>
-    <h1>Mon Site de Tutos & Outils</h1>
-    <p>Des astuces simples et des outils pratiques pour le quotidien</p>
-  </header>
 
+<header>
+  <h1>Mon Site de Tutos & Outils</h1>
+  <p>Bienvenue sur mon site !</p>
   <nav>
-    <a href="#tutos">Tutos</a>
-    <a href="#outils">Outils</a>
-    <a href="#apropos">À propos</a>
+    <a href="#">Tutos</a>
+    <a href="#">Outils</a>
+    <a href="#">À propos</a>
   </nav>
+</header>
 
-  <div class="container">
-    <section id="tutos">
-      <h2>Tutos récents</h2>
-      <div class="card">
-        <h3>📌 Enregistrer son écran gratuitement</h3>
-        <p>Apprenez à enregistrer votre écran sous Windows sans logiciel payant, en utilisant OBS Studio.</p>
-        <a href="#">Lire le tuto</a>
-      </div>
-      <div class="card">
-        <h3>📌 Libérer de la RAM en 2 minutes</h3>
-        <p>Un guide simple pour optimiser la mémoire vive de votre PC sans logiciels compliqués.</p>
-        <a href="#">Lire le tuto</a>
-      </div>
-    </section>
+<section>
+  <h2>Article Exemple</h2>
+  <p>Ceci est un exemple de texte pour vérifier que le CSS fonctionne.</p>
+  <button>Cliquer ici</button>
+</section>
 
-    <section id="outils">
-      <h2>Outils pratiques</h2>
-      <div class="card">
-        <h3>🔑 Générateur de mot de passe</h3>
-        <input type="number" id="length" placeholder="Longueur (ex: 12)" min="4" max="30">
-        <button onclick="generatePassword()">Générer</button>
-        <p id="password"></p>
-      </div>
-    </section>
+<footer>
+  <p>© 2025 Mon Site de Tutos</p>
+</footer>
 
-    <section id="apropos">
-      <h2>À propos</h2>
-      <div class="card">
-        <p>Salut ! Je partage ici mes astuces informatiques et quelques petits outils gratuits.  
-        L’objectif : vous simplifier la vie numérique sans prise de tête. 🚀</p>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <p>© 2025 - Mon Site de Tutos & Outils</p>
-  </footer>
-
-  <script>
-    function generatePassword() {
-      const length = document.getElementById("length").value || 12;
-      const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
-      let password = "";
-      for (let i = 0; i < length; i++) {
-        password += chars.charAt(Math.floor(Math.random() * chars.length));
-      }
-      document.getElementById("password").innerText = password;
-    }
-  </script>
 </body>
 </html>
