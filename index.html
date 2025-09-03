@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Site de Tutos</title>
+  <title>Mon Site Ultime de Tutos & Outils</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -11,56 +11,82 @@
 
   <!-- ===== En-tête ===== -->
   <header>
-    <h1>Mon Site de Tutos & Outils</h1>
+    <h1>Mon Site Ultime</h1>
+    <p>Tutos, outils et astuces pour tout faire facilement</p>
     <nav>
-      <a href="#">Tutos</a>
-      <a href="#">Outils</a>
-      <a href="#">À propos</a>
+      <a href="#tutos">Tutos</a>
+      <a href="#outils">Outils</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <button id="darkModeToggle">🌙 Mode Sombre</button>
   </header>
 
-  <!-- ===== Contenu principal ===== -->
-  <main>
-    <section>
-      <h2>Derniers tutos</h2>
+  <!-- ===== Tutos ===== -->
+  <section id="tutos">
+    <h2>Derniers Tutos</h2>
+    <div class="cards">
       <article>
-        <h3>✨ Créer son premier site GitHub Pages</h3>
-        <p>Un guide simple pour mettre en ligne ton site gratuitement.</p>
+        <h3>Créer son site GitHub Pages</h3>
+        <p>Guide rapide pour publier ton site gratuitement.</p>
         <a class="btn" href="#">Lire le tuto</a>
       </article>
 
       <article>
-        <h3>🔒 Générateur de mots de passe</h3>
-        <p>Clique sur le bouton pour générer un mot de passe aléatoire :</p>
+        <h3>Apprendre JavaScript</h3>
+        <p>Les bases pour devenir un pro du front-end.</p>
+        <a class="btn" href="#">Lire le tuto</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Outils ===== -->
+  <section id="outils">
+    <h2>Outils Pratiques</h2>
+    <div class="tools">
+
+      <!-- Générateur de mots de passe -->
+      <div class="tool">
+        <h3>Générateur de mots de passe</h3>
         <input type="text" id="password" readonly>
         <button id="generate">Générer</button>
-      </article>
-    </section>
-  </main>
+      </div>
+
+      <!-- Calculatrice simple -->
+      <div class="tool">
+        <h3>Calculatrice</h3>
+        <input type="text" id="calcDisplay" readonly>
+        <div class="calcButtons">
+          <button onclick="appendCalc('1')">1</button>
+          <button onclick="appendCalc('2')">2</button>
+          <button onclick="appendCalc('+')">+</button>
+          <button onclick="clearCalc()">C</button>
+          <button onclick="calcResult()">=</button>
+        </div>
+      </div>
+
+      <!-- Convertisseur Celsius/Fahrenheit -->
+      <div class="tool">
+        <h3>Convertisseur Température</h3>
+        <input type="number" id="celsius" placeholder="°C">
+        <button onclick="convertTemp()">Convertir</button>
+        <p id="fahrenheit"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Envoyez-moi vos idées ou vos suggestions !</p>
+  </section>
 
   <!-- ===== Pied de page ===== -->
   <footer>
-    <p>© 2025 Mon Site de Tutos – Fait avec ❤️</p>
+    <p>© 2025 Mon Site Ultime – Fait avec ❤️</p>
   </footer>
 
-  <!-- ===== JavaScript pour le générateur ===== -->
-  <script>
-    const generateBtn = document.getElementById('generate');
-    const passwordField = document.getElementById('password');
-
-    function generatePassword(length = 12) {
-      const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~';
-      let password = '';
-      for (let i = 0; i < length; i++) {
-        password += chars.charAt(Math.floor(Math.random() * chars.length));
-      }
-      return password;
-    }
-
-    generateBtn.addEventListener('click', () => {
-      passwordField.value = generatePassword();
-    });
-  </script>
-
+  <!-- ===== JS ===== -->
+  <script src="script.js"></script>
 </body>
 </html>
