@@ -2,91 +2,71 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <title>Mon Site Ultime de Tutos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Site Ultime de Tutos & Outils</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ===== En-tête ===== -->
-  <header>
-    <h1>Mon Site Ultime</h1>
-    <p>Tutos, outils et astuces pour tout faire facilement</p>
-    <nav>
-      <a href="#tutos">Tutos</a>
-      <a href="#outils">Outils</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button id="darkModeToggle">🌙 Mode Sombre</button>
-  </header>
+<header>
+  <h1>Mon Site Ultime</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="tuto-github.html">GitHub Pages</a>
+    <a href="tuto-js.html">JavaScript</a>
+    <a href="tuto-html.html">HTML & CSS</a>
+  </nav>
+  <button id="darkModeToggle">🌙 Mode Sombre</button>
+</header>
 
-  <!-- ===== Tutos ===== -->
+<main>
   <section id="tutos">
     <h2>Derniers Tutos</h2>
     <div class="cards">
       <article>
-        <h3>Créer son site GitHub Pages</h3>
+        <h3>Créer son premier site GitHub Pages</h3>
         <p>Guide rapide pour publier ton site gratuitement.</p>
-        <a class="btn" href="#">Lire le tuto</a>
+        <a class="btn" href="tuto-github.html">Lire le tuto</a>
       </article>
-
       <article>
         <h3>Apprendre JavaScript</h3>
         <p>Les bases pour devenir un pro du front-end.</p>
-        <a class="btn" href="#">Lire le tuto</a>
+        <a class="btn" href="tuto-js.html">Lire le tuto</a>
+      </article>
+      <article>
+        <h3>HTML & CSS pour débutants</h3>
+        <p>Tout ce qu’il faut savoir pour créer une page web.</p>
+        <a class="btn" href="tuto-html.html">Lire le tuto</a>
       </article>
     </div>
   </section>
 
-  <!-- ===== Outils ===== -->
   <section id="outils">
     <h2>Outils Pratiques</h2>
     <div class="tools">
-
-      <!-- Générateur de mots de passe -->
       <div class="tool">
         <h3>Générateur de mots de passe</h3>
+        <label for="length">Longueur :</label>
+        <input type="number" id="length" min="4" max="50" value="12">
         <input type="text" id="password" readonly>
         <button id="generate">Générer</button>
       </div>
 
-      <!-- Calculatrice simple -->
-      <div class="tool">
-        <h3>Calculatrice</h3>
-        <input type="text" id="calcDisplay" readonly>
-        <div class="calcButtons">
-          <button onclick="appendCalc('1')">1</button>
-          <button onclick="appendCalc('2')">2</button>
-          <button onclick="appendCalc('+')">+</button>
-          <button onclick="clearCalc()">C</button>
-          <button onclick="calcResult()">=</button>
-        </div>
-      </div>
-
-      <!-- Convertisseur Celsius/Fahrenheit -->
       <div class="tool">
         <h3>Convertisseur Température</h3>
         <input type="number" id="celsius" placeholder="°C">
         <button onclick="convertTemp()">Convertir</button>
         <p id="fahrenheit"></p>
       </div>
-
     </div>
   </section>
+</main>
 
-  <!-- ===== Contact ===== -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Envoyez-moi vos idées ou vos suggestions !</p>
-  </section>
+<footer>
+  <p>© 2025 Mon Site Ultime – Fait avec ❤️</p>
+</footer>
 
-  <!-- ===== Pied de page ===== -->
-  <footer>
-    <p>© 2025 Mon Site Ultime – Fait avec ❤️</p>
-  </footer>
-
-  <!-- ===== JS ===== -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
