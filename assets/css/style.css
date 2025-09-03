@@ -1,1 +1,136 @@
+/* ==== Fond et texte général ==== */
+body {
+  background: linear-gradient(135deg, #f0f2f5 0%, #dfe9f3 100%);
+  color: #333 !important;
+  font-family: 'Poppins', Arial, sans-serif !important;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s;
+}
+
+/* ==== En-tête ==== */
+header {
+  background-color: #ff6b6b !important;
+  color: white !important;
+  text-align: center;
+  padding: 50px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: background 0.3s;
+}
+
+header:hover {
+  background-color: #ff4757 !important;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 3em;
+  margin: 0.2em 0;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 0.2em 0;
+}
+
+/* ==== Navigation ==== */
+nav {
+  text-align: center;
+  margin: 25px 0;
+}
+
+nav a {
+  color: #ff6b6b !important;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #ff4757 !important;
+  transform: scale(1.1);
+}
+
+/* ==== Sections et articles ==== */
+section, article {
+  background-color: #ffffff !important;
+  margin: 25px auto;
+  padding: 35px 25px;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover, article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* ==== Titres ==== */
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif !important;
+  color: #2c3e50 !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+/* ==== Paragraphes ==== */
+p {
+  color: #555 !important;
+  max-width: 750px;
+  margin: 0.5em auto;
+  padding: 0 10px;
+  font-size: 1.05em;
+}
+
+/* ==== Liens ==== */
+a {
+  color: #ff6b6b !important;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+a:hover {
+  color: #ff4757 !important;
+  transform: scale(1.05);
+}
+
+/* ==== Boutons ==== */
+button, .btn {
+  background: linear-gradient(135deg, #ff6b6b, #ff4757) !important;
+  color: white !important;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* ==== Pied de page ==== */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #777 !important;
+  font-size: 0.95em;
+  background-color: #f0f2f5 !important;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+}
 
