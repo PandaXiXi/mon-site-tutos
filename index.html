@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Site de Tutos & Outils</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .tool {
+      margin-top: 1rem;
+    }
+    input, button {
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mon Site de Tutos & Outils</h1>
+    <p>Des astuces simples et des outils pratiques pour le quotidien</p>
+  </header>
+
+  <nav>
+    <a href="#tutos">Tutos</a>
+    <a href="#outils">Outils</a>
+    <a href="#apropos">À propos</a>
+  </nav>
+
+  <div class="container">
+    <section id="tutos">
+      <h2>Tutos récents</h2>
+      <div class="card">
+        <h3>📌 Enregistrer son écran gratuitement</h3>
+        <p>Apprenez à enregistrer votre écran sous Windows sans logiciel payant, en utilisant OBS Studio.</p>
+        <a href="#">Lire le tuto</a>
+      </div>
+      <div class="card">
+        <h3>📌 Libérer de la RAM en 2 minutes</h3>
+        <p>Un guide simple pour optimiser la mémoire vive de votre PC sans logiciels compliqués.</p>
+        <a href="#">Lire le tuto</a>
+      </div>
+    </section>
+
+    <section id="outils">
+      <h2>Outils pratiques</h2>
+      <div class="card">
+        <h3>🔑 Générateur de mot de passe</h3>
+        <input type="number" id="length" placeholder="Longueur (ex: 12)" min="4" max="30">
+        <button onclick="generatePassword()">Générer</button>
+        <p id="password"></p>
+      </div>
+    </section>
+
+    <section id="apropos">
+      <h2>À propos</h2>
+      <div class="card">
+        <p>Salut ! Je partage ici mes astuces informatiques et quelques petits outils gratuits.  
+        L’objectif : vous simplifier la vie numérique sans prise de tête. 🚀</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 - Mon Site de Tutos & Outils</p>
+  </footer>
+
+  <script>
+    function generatePassword() {
+      const length = document.getElementById("length").value || 12;
+      const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+      let password = "";
+      for (let i = 0; i < length; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById("password").innerText = password;
+    }
+  </script>
+</body>
+</html>
